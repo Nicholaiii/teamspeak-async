@@ -1,6 +1,6 @@
 {
   "name": "teamspeak-async",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use Teamspeak ServerQuery from Node",
   "repository": "nicholaiii/teamspeak-async",
   "main": "index.js",
