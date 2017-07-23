@@ -1,27 +1,36 @@
 {
-  "name": "teamspeak-async",
-  "version": "1.0.2",
-  "description": "Use Teamspeak ServerQuery from Node",
-  "repository": "nicholaiii/teamspeak-async",
-  "main": "index.js",
-  "scripts": {
-    "build": "babel src -d lib",
-    "prepare": "npm run build"
-  },
-  "author": "Nicholai Nissen",
-  "license": "MIT",
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-preset-env": "^1.6.0"
-  },
-  "dependencies": {
-    "bluebird": "^2.9.33",
-    "byline": "^4.2.1",
-    "debug": "^2.6.8"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  }
+	"name": "teamspeak-async",
+	"version": "1.0.2",
+	"description": "Use Teamspeak ServerQuery from Node",
+	"repository": "nicholaiii/teamspeak-async",
+	"main": "index.js",
+	"scripts": {
+		"build": "babel src -d lib",
+		"prepare": "npm run build",
+		"test": "xo",
+		"precommit": "npm test"
+	},
+	"author": "Nicholai Nissen",
+	"license": "MIT",
+	"devDependencies": {
+		"babel-cli": "^6.24.1",
+		"babel-preset-env": "^1.6.0",
+		"husky": "^0.14.3"
+	},
+	"dependencies": {
+		"bluebird": "^2.9.33",
+		"byline": "^4.2.1",
+		"debug": "^2.6.8"
+	},
+	"xo": {
+		"semicolon": false,
+		"ignores": [
+			"lib/*"
+		]
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
+	}
 }
