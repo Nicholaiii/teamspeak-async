@@ -1,5 +1,5 @@
 # Teamspeak-Async
-### A node library to interface the ServerQuery protocol on your Teamspeak Server.
+### A library to interface the ServerQuery protocol on your Teamspeak Server.
 
 ## Usage
 Targets Node `>= 7.6` and uses async/await. Transpile with Babel for older versions.
@@ -29,7 +29,7 @@ client.send('clientlist').then(clients => {
 })
 ```
 
-I recommend using the [module config](https://www.npmjs.com/package/config), that enables a project-global config, with many great features like JSON5 support.
+I recommend using the [module config](https://www.npmjs.com/package/config), that enables a project-global, config, with many great features like JSON5 support and different environments.
 
 ```js
 /* config example */
@@ -39,29 +39,42 @@ const client = new TeamSpeakClient(config.teamspeak) /* or: config.get('teamspea
 ```
 
 Options:
-- host: IP or Hostname for Teamspeak server - **required**
-- port: Port for ServerQuery, default `10011` - *optional*
-- user: Username to authenticate with - *optional*
-- password: Password to authenticate with - *optional*
-- server: Server ID to select, default `1` - *optional*
-- disableUse: Disables automatically using server, default `false` - *optional*
-- disableRegister: Disables registering for `server` notifications, default `false` - *optional*
+- `host`: IP or Hostname for Teamspeak server - **required**
+- `port`: Port for ServerQuery, default `10011` - *optional*
+- `user`: Username to authenticate with - *optional*
+- `password`: Password to authenticate with - *optional*
+- `server`: Server ID to select, default `1` - *optional*
+- `disableUse`: Disables automatically using server, default `false` - *optional*
+- `disableRegister`: Disables registering for `server` notifications, default `false` - *optional*
 
 Methods:
-- send(command, params): Send a request to the ServerQuery
-- authenticate(user, password): Authenticate on your server
-- register(event): Registers for an event
-- use(server): Use a particular server
+- `send(command, params)` Send a request to the ServerQuery
+- `authenticate(user, password)` Authenticate on your server
+- `register(event)` Registers for an event
+- `use(server)` Use a particular server
 
 ## Contributions
 Feel free to contribute to this repo. Just send a PR.
 
+```
 TODO:
-- Webpack instead of Babel, with uglify et al.
-- Unit tests with AVA
-- Linting with XO
+Webpack instead of Babel, with uglify et al.
+Unit tests with AVA
+Linting with XO
+```
+## Development
+Clone repository and run `npm install` in directory.
+
+To build run `npm run build`
+
+Development requires at least `npm@4`, but I highly recommend `npm@5` for a lot faster npm experience.
+
+## Debug
+Teamspeak-async uses the debug module, to display extensive debug information. To enable it set TeamSpeakClient as target for the debug env variable before running your application
+- windows: `set DEBUG=TeamSpeakClient`
+- linux/mac: `DEBUG=TeamSpeakClient npm start`
 
 ## Acknowledgements
 Parsing of lines largely based on xbenjii/Teamspeak, the module that inspired me to create a modernised async Teamspeak ServerQuery client.
 
-`class Queue` based on Queue.js by Stephen Morley
+class `Queue` based on Queue.js by Stephen Morley
