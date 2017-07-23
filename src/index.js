@@ -1,8 +1,8 @@
 'use strict'
 /**
  * teamspeak-async
- * copyright Nicholai Nissen 2017 etc
- * license might change later. fuck this for now. ~n
+ * written by Nicholai Nissen
+ * MIT licensed
  */
 
 import { EventEmitter } from 'events'
