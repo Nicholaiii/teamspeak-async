@@ -104,6 +104,10 @@ export class TeamSpeakClient extends EventEmitter { // eslint-disable-line impor
 		return this.send('clientpoke', {clid, msg})
 	}
 
+	listClients() {
+		return this.send('clientlist')
+	}
+
 	parseQueue() {
 		if (Boolean(this.processing) || this.queue.isEmpty()) {
 			this.debug(`Skipping parsing. \np::${Boolean(this.processing)} q::${this.queue.isEmpty()}`)
