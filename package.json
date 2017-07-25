@@ -9,7 +9,8 @@
 		"prepare": "npm run build",
 		"test": "xo",
 		"precommit": "npm test",
-		"release": "standard-version"
+		"release": "standard-version",
+		"commitmsg": "validate-commit-msg"
 	},
 	"author": "Nicholai Nissen",
 	"license": "MIT",
@@ -17,7 +18,8 @@
 		"babel-cli": "^6.24.1",
 		"babel-preset-env": "^1.6.0",
 		"husky": "^0.14.3",
-		"standard-version": "^4.2.0"
+		"standard-version": "^4.2.0",
+		"validate-commit-msg": "^2.13.1"
 	},
 	"dependencies": {
 		"bluebird": "^2.9.33",
