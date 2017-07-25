@@ -23,8 +23,8 @@ export class TeamSpeakClient extends EventEmitter { // eslint-disable-line impor
 
 		this.debug('Trying to create new client with information: %o', {host, port, user, password})
 
-		if (!host || !port) {
-			throw new Error('Cannot create instance without ' + !host ? (port ? 'host' : 'host and port ') : 'port')
+		if (!host) {
+			throw new Error('Cannot create instance without host')
 		}
 
 		this.host = host
