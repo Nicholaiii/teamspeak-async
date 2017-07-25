@@ -8,14 +8,16 @@
 		"build": "babel src -d lib",
 		"prepare": "npm run build",
 		"test": "xo",
-		"precommit": "npm test"
+		"precommit": "npm test",
+		"release": "standard-version"
 	},
 	"author": "Nicholai Nissen",
 	"license": "MIT",
 	"devDependencies": {
 		"babel-cli": "^6.24.1",
 		"babel-preset-env": "^1.6.0",
-		"husky": "^0.14.3"
+		"husky": "^0.14.3",
+		"standard-version": "^4.2.0"
 	},
 	"dependencies": {
 		"bluebird": "^2.9.33",
