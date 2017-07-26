@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/nicholaiii/teamspeak-async/compare/v1.2.0...v1.2.1) (2017-07-26)
+
+
+### Bug Fixes
+
+* **TeamSpeakClient:** Write debug object on send ([e8ed60b](https://github.com/nicholaiii/teamspeak-async/commit/e8ed60b))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/nicholaiii/teamspeak-async/compare/v1.1.2...v1.2.0) (2017-07-26)
 
