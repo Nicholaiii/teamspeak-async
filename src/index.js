@@ -52,7 +52,6 @@ export class TeamSpeakClient extends EventEmitter { // eslint-disable-line impor
 		this.processing = null
 
 		function reportConnection() {
-			this._connection.resolve()
 			this.debug('Socket connected')
 			this.reader = byline.createStream(this.socket, {encoding: 'utf-8', keepEmptyLines: false})
 			this.reader.on('data', this.readLine.bind(this))
@@ -60,6 +59,7 @@ export class TeamSpeakClient extends EventEmitter { // eslint-disable-line impor
 			if (this.user && this.password) {
 				selfAuth.apply(this)
 			}
+			this._connection.resolve()
 		}
 		async function selfAuth() {
 			try {
