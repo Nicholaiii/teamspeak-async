@@ -1,41 +1,51 @@
 {
-	"name": "teamspeak-async",
-	"version": "1.1.1",
-	"description": "Use Teamspeak ServerQuery from Node",
-	"repository": "nicholaiii/teamspeak-async",
-	"main": "index.js",
-	"scripts": {
-		"build": "babel src -d lib",
-		"prepare": "npm run build",
-		"test": "xo",
-		"precommit": "npm test",
-		"release": "standard-version",
-		"commitmsg": "validate-commit-msg"
-	},
-	"author": "Nicholai Nissen",
-	"license": "MIT",
-	"devDependencies": {
-		"babel-cli": "^6.24.1",
-		"babel-preset-env": "^1.6.0",
-		"husky": "^0.14.3",
-		"standard-version": "^4.2.0",
-		"validate-commit-msg": "^2.13.1"
-	},
-	"dependencies": {
-		"bluebird": "^2.9.33",
-		"byline": "^4.2.1",
-		"debug": "^2.6.8"
-	},
-	"xo": {
-		"semicolon": false,
-		"ignores": [
-			"lib/*"
-		]
-	},
-	"config": {
-		"commitizen": {
-			"path": "cz-conventional-changelog"
-		}
-	},
-	"keywords": ["teamspeak", "serverquery", "async", "await", "promise", "ts", "ts3", "server", "query"]
+  "name": "teamspeak-async",
+  "version": "1.1.2",
+  "description": "Use Teamspeak ServerQuery from Node",
+  "repository": "nicholaiii/teamspeak-async",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "prepare": "npm run build",
+    "test": "xo",
+    "precommit": "npm test",
+    "release": "standard-version",
+    "commitmsg": "validate-commit-msg"
+  },
+  "author": "Nicholai Nissen",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "husky": "^0.14.3",
+    "standard-version": "^4.2.0",
+    "validate-commit-msg": "^2.13.1"
+  },
+  "dependencies": {
+    "bluebird": "^2.9.33",
+    "byline": "^4.2.1",
+    "debug": "^2.6.8"
+  },
+  "xo": {
+    "semicolon": false,
+    "ignores": [
+      "lib/*"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "keywords": [
+    "teamspeak",
+    "serverquery",
+    "async",
+    "await",
+    "promise",
+    "ts",
+    "ts3",
+    "server",
+    "query"
+  ]
 }
