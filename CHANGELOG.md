@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/nicholaiii/teamspeak-async/compare/v1.1.2...v1.2.0) (2017-07-26)
+
+
+### Bug Fixes
+
+* **TeamSpeakClient:** Fix UUIDs missing equal sign ([14e3fdc](https://github.com/nicholaiii/teamspeak-async/commit/14e3fdc))
+* **TeamSpeakClient:** Move conditional for selfAuth to ensure promise is good. ([8af70c0](https://github.com/nicholaiii/teamspeak-async/commit/8af70c0))
+
+
+### Features
+
+* **TeamSpeakClient:** Attach type to notifications ([a7f4d77](https://github.com/nicholaiii/teamspeak-async/commit/a7f4d77))
+
+
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/nicholaiii/teamspeak-async/compare/v1.1.1...v1.1.2) (2017-07-26)
 
