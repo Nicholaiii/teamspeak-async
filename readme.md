@@ -1,5 +1,9 @@
 # Teamspeak-Async
 ### A library to interface the ServerQuery protocol on your Teamspeak Server.
+[![NPM](https://img.shields.io/npm/v/teamspeak-async.svg)](https://www.npmjs.com/package/teamspeak-async)
+[![](https://img.shields.io/npm/l/teamspeak-async.svg)](https://github.com/Nicholaiii/teamspeak-async/blob/master/LICENSE)
+[![](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+[![](https://img.shields.io/npm/dt/teamspeak-async.svg)](https://www.npmjs.com/package/teamspeak-async)
 
 ## Usage
 Targets Node `>= 7.6` and uses async/await. Transpile with Babel for older versions.
