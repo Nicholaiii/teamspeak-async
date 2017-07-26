@@ -55,15 +55,15 @@ export class TeamSpeakClient extends EventEmitter { // eslint-disable-line impor
 			this.debug('Socket connected')
 			this.reader = byline.createStream(this.socket, {encoding: 'utf-8', keepEmptyLines: false})
 			this.reader.on('data', this.readLine.bind(this))
-			/* If username and password is supplied during creation, authenticate now */
-			if (this.user && this.password) {
-				selfAuth.apply(this)
-			}
-			this._connection.resolve()
+			selfAuth.apply(this)
 		}
+
 		async function selfAuth() {
 			try {
-				await this.authenticate(this.user, this.password)
+				/* If username and password is supplied during creation, authenticate now */
+				if (this.user && this.password) {
+					await this.authenticate(this.user, this.password)
+				}
 				this.debug('Self-Authenticated')
 				if (!this.disableUse) {
 					await this.use(this.server)
@@ -73,15 +73,17 @@ export class TeamSpeakClient extends EventEmitter { // eslint-disable-line impor
 					await this.register('server')
 					this.debug('Self-registered for server')
 				}
+				this._connection.resolve()
 			} catch (err) {
 				console.error('Teamspeak Authentication error')
 				console.error(err)
 			}
 		}
+		/* End of constructor */
 	}
 
 	send(command, params) {
-		this.debug('Enqueuing c:: %s \np:: %s', command, params)
+		this.debug('Enqueuing c:: %s \np:: %o', command, params)
 		const request = new Request(command, params)
 		this.queue.enqueue(request)
 		this.parseQueue()
