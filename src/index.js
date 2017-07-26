@@ -159,8 +159,14 @@ export class TeamSpeakClient extends EventEmitter { // eslint-disable-line impor
 			const type = notification.substr(notification, notification.indexOf(' '))
 
 			this.debug('#%d Emitting event type %s and *', this.lineCount, type)
-			this.emit(type, parseResponse(line))
-			this.emit('*', parseResponse(line))
+
+			const data = parseResponse(line)
+
+			/* Save notification type in event data */
+			data.type = type
+
+			this.emit(type, data)
+			this.emit('*', data)
 		} else if (this.processing) {
 			/* Actual response, not status message ,which in teamspeak for some reason goes localhost */
 			this.processing._response = parseResponse(line)
