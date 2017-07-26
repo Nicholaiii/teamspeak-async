@@ -36,7 +36,7 @@ export class TeamSpeakClient extends EventEmitter { // eslint-disable-line impor
 		this.disableUse = disableUse
 
 		this.debug('Connecting to %s:%s', host, port)
-		this.socket = net.connect({host, port})
+		this.socket = net.connect({host, port: this.port})
 
 		this._connection = {}
 		this._connection.promise = new Promise((resolve, reject) => {
