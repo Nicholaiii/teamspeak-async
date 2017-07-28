@@ -4,7 +4,6 @@
  * written by Nicholai Nissen
  * MIT licensed
  */
-
 import {EventEmitter} from 'events'
 import net from 'net'
 import debug from 'debug'
@@ -181,17 +180,15 @@ export class TeamSpeakClient extends EventEmitter { // eslint-disable-line impor
  * @param	{String} string String returned by ServerQuery
  * @return {String}				Plain string
  */
-function unescape(string) {
-	return string.replace(/\\s/g, ' ')
-		.replace(/\\p/, '|')
-		.replace(/[\\]/g, '$&')
+function unEscape(string) {
+	return string.replace(/\\s/g, ' ').replace(/\\p/, '|').replace(/\\\\/g, '\\').replace(/\\\//g, '\/') // eslint-disable-line no-useless-escape
 }
 
 function parseResponse(data) {
 	let parsed = data.split('|').map(group => {
 		return group.split(' ').reduce((obj, val) => {
 			const [k, v] = val.split('=')
-			obj[k] = v ? unescape(v) : ''
+			obj[k] = v ? unEscape(v) : ''
 			return obj
 		}, {})
 	})
